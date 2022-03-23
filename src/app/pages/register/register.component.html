@@ -1,0 +1,94 @@
+<div class="bootstrap-wrapper">
+
+    <div class="container">
+      <mat-card class="mt20">
+        <div class="row">
+
+            <div class="col-md-6 offset-md-3">
+              <mat-card class="card">
+                <h1 class="text-center">Registration Form</h1>
+
+                <!-- {{user | json}} -->
+
+                <form (ngSubmit)="formSubmit()" >
+                                        <!--Name-->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Name</mat-label>
+                        <input
+                          [(ngModel)]="user.customerName" name = "customerName"
+                        matInput placeholder="Enter Name">
+                      </mat-form-field>
+
+                                          <!--Email-->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Email Id</mat-label>
+                        <input
+                        [(ngModel)]="user. email" name = "email"
+                        matInput placeholder="Enter Email Id : Example@sample.in">
+                      </mat-form-field>
+
+                                          <!--password-->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Password</mat-label>
+                        <input type="password"
+                        [(ngModel)]="user.password" name = "password"
+                        matInput placeholder="Enter password">
+                      </mat-form-field>
+
+                                          <!--aadharNo-->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Mobile Number</mat-label>
+                        <input
+                        [(ngModel)]="user.mobileNO" name = "mobileNO"
+                        matInput placeholder="Enter Mobile Number">
+                      </mat-form-field>
+
+                                          <!--PanNo-->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>PAN Number</mat-label>
+                        <input 
+                        [(ngModel)]="user.pan" name = "pan"
+                        matInput placeholder="Enter PAN Number">
+                      </mat-form-field>
+
+                                          <!--Gender-->
+                    <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Gender</mat-label>
+                        <input
+                        [(ngModel)]="user.gender" name = "gender"
+                        matInput placeholder="Male/Female">                        
+                      </mat-form-field>
+
+                      <mat-form-field class="full-width" appearance="fill">
+                        <mat-label>Date Of Birth</mat-label>
+                        <input 
+                        [(ngModel)]="user.dateOfBirth" name = "dateOfBirth"
+                        matInput placeholder="DD/MM/YYYY">                        
+                      </mat-form-field>
+
+                    
+
+                      <div class="container text-center">
+
+                        <button type="submit"  mat-raised-button color="primary">Submit</button>
+                        <button style="margin-left: 20px;" mat-raised-button color="accent">Cancle</button>
+
+
+
+                      </div>
+
+
+
+
+                </form>
+              </mat-card>
+
+
+            </div>
+
+        </div>
+      </mat-card>
+
+    </div>
+
+</div>

@@ -1,0 +1,69 @@
+<div class="bootstrap-wrapper">
+   
+    <div class="container">
+        <mat-card class="mt20">
+        <div class="row">
+
+            <div class="col-md-6 offset-md-3">
+                <mat-card class="card">
+                <h1 class="text-center">Login Form</h1>
+
+                <!-- {{user | json}} -->
+
+                <form (ngSubmit)="formSubmit()" >
+                    
+
+                                          <!--userId-->
+                    <form class="full-width container text-center mt10" appearance="fill">
+                        <label class = "min-width">User Id</label>
+                        <input
+                        [(ngModel)]="user.userId" name = "userId" required
+                        matInput placeholder="Enter Email Id : Example@sample.in">
+                    </form>
+
+                                          <!--password-->
+                    <form class="full-width container text-center mt10" appearance="fill">
+                        <label class = "min-width">Password</label>
+                        <input type="password"
+                        [(ngModel)]="user.password" name = "password" required
+                        matInput placeholder="Enter password">
+                      </form>
+
+                    
+                    
+
+                      <div class="container text-center">
+
+                        <button type="submit"  mat-raised-button color="primary">Login</button>
+                        <button class="ml20" mat-raised-button color="accent">Cancle</button>
+
+                      </div>
+                      
+                        
+                        
+                        <div class="container text-center mt10">
+                            <a [routerLink]="'/registration'">First Time User? Register</a>
+                        </div>
+                        <div class="container text-center mt10">
+                            <a [routerLink]="'/registration'">Forget UserID</a>
+                        </div>
+                        <div class="container text-center mt10">
+                            <a [routerLink]="'/user-dashboard'">Forget Password</a>
+                        </div>
+
+
+
+
+                </form>
+
+            </mat-card>
+
+            </div>
+
+        </div>
+
+    </mat-card>
+    </div>
+
+</div>
+
