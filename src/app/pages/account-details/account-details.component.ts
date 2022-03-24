@@ -8,11 +8,19 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class AccountDetailsComponent implements OnInit {
 
-  user:any;
+  user:any = {};
   constructor(private loginService:LoginService) { }
 
   ngOnInit(): void {
-    this.user = this.loginService.getUser(); 
+    this.loginService.getUser().subscribe(
+      (data:any)=>{
+        this.user = data
+        this.user
+      },
+      (error)=>{
+        console.log(error)
+      }
+    )
   }
 
 }

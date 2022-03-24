@@ -17,7 +17,7 @@
                     <form class="full-width container text-center mt10" appearance="fill">
                         <label class = "min-width">User Id</label>
                         <input
-                        [(ngModel)]="user.userId" name = "userId" required
+                        [(ngModel)]="user.userName" name = "userName" required
                         matInput placeholder="Enter Email Id : Example@sample.in">
                     </form>
 
@@ -45,10 +45,10 @@
                             <a [routerLink]="'/registration'">First Time User? Register</a>
                         </div>
                         <div class="container text-center mt10">
-                            <a [routerLink]="'/registration'">Forget UserID</a>
+                            <a [routerLink]="'/registration'">Forget UserName</a>
                         </div>
                         <div class="container text-center mt10">
-                            <a [routerLink]="'/user-dashboard'">Forget Password</a>
+                            <a [routerLink]="'/user-dashboard'">Forgot Password</a>
                         </div>
 
 

@@ -10,9 +10,9 @@ export class LoginService {
   constructor(private http:HttpClient) { }
 
   //generate token
-
+  
   public login(user:any){
-    return this.http.post(`${baseUrl}/customer/login/`,user);
+    return this.http.get(`${baseUrl}/customers/login/${user.userName}/${user.password}`);
   }
 
   public setUser(user:any){
@@ -20,18 +20,23 @@ export class LoginService {
   }
 
   public getUser(){
-    // let user =localStorage.getItem("user");
-    let user = {
-      "customerName": "Sai",
-      "customerId": 1998
-    }
-    if(user!=null){
-      return user
-    }
-    else{
-      return null;
-    }
+    let user: any =localStorage.getItem("user");
+    user = JSON.parse(user)
+    this.http.get(`${baseUrl}/customers/getCustomerDetails/${user.userName}`).subscribe((res)=> {
+      localStorage.setItem('userData',JSON.stringify(res));
+    });
+    return this.http.get(`${baseUrl}/customers/getCustomerDetails/${user.userName}`)
   }
-
+  public getTransactions(data:any) {
+    let user: any =localStorage.getItem("userData");
+    user = JSON.parse(user)
+    return this.http.get(`${baseUrl}/account/getTransactionDetails/${user.accountNumber}`)
+  }
+  public fundTransfer(data: any){
+    let user: any =localStorage.getItem("userData");
+    user = JSON.parse(user)
+    return this.http.get(`${baseUrl}/customers/transferAmount/${user.accountNumber}/${data.accountNo}/${data.amount}`);
+  }
+  
 
 }

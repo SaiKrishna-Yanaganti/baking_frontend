@@ -12,7 +12,7 @@ export class LoginComponent implements OnInit {
   constructor(private _snackBar: MatSnackBar,private loginService:LoginService) { }
 
   public user={
-    userId:'',
+    userName:'',
     password:'',
     
   }
@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   formSubmit(){
 
-    if(this.user.userId.trim() == ''|| this.user.userId == null)
+    if(this.user.userName.trim() == ''|| this.user.userName == null)
     {
       this._snackBar.open("Username is Required..!","", {
         duration : 2000,
@@ -42,11 +42,14 @@ export class LoginComponent implements OnInit {
         window.location.href='/user-dashboard';
         console.log(data)
         this.loginService.setUser(this.user);
+        this.loginService.getUser();
       },
       (error)=>{
-        window.location.href='/user-dashboard';
-        console.log(error)
-        this.loginService.setUser(this.user);
+        if(error.error.text == "login successfull") {
+          window.location.href='/user-dashboard';
+          this.loginService.setUser(this.user);
+          this.loginService.getUser();
+        }
       }
     )
 

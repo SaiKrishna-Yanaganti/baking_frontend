@@ -12,52 +12,23 @@
 
               <form (ngSubmit)="myTransfer()" >
                                       <!--Account No-->
-                  <mat-form-field class="full-width" appearance="fill">
-                      <mat-label>Account No</mat-label>
+                  <form class="full-width" appearance="fill">
+                      <label>Account No</label>
                       <input
                       [(ngModel)]="user.accountNo" name="accountNo"
                       matInput placeholder="Enter Account">
-                    </mat-form-field>
+                    </form>
 
                                         <!--Amount -->
-                  <mat-form-field class="full-width" appearance="fill">
-                      <mat-label>Amount</mat-label>
+                  <form class="full-width" appearance="fill">
+                      <label>Amount</label>
                       <input
                       [(ngModel)]="user.amount" name="amount"
                       matInput placeholder="Enter amount">
-                    </mat-form-field>
-
-                    <section class="example-section">
-                      <mat-radio-group [(ngModel)]="user.modeOfTransaction" aria-label="Select an option">
-                        <mat-radio-button value="1">RTGS</mat-radio-button>
-                        <mat-radio-button value="2">IMPS</mat-radio-button>
-                        <mat-radio-button value="2">NEFT</mat-radio-button>
-                      </mat-radio-group>
-                    </section>
-
-                    <mat-form-field appearance="fill">
-                      <mat-label>Select Payee:</mat-label>
-                      <mat-select>
-                        <mat-option value="one">PID456893</mat-option>
-                        <mat-option value="two">PID4554689</mat-option>
-                        <!-- <mat-option value="two"></mat-option> -->
-                        <mat-option value="two">PID4576534</mat-option>
-                        <!-- <mat-option value="two">Second option</mat-option>
-                        <mat-option value="two">Second option</mat-option> -->
-                      </mat-select>
-                    </mat-form-field>
-
-
-
-                  
-
+                    </form>
                     <div class="container text-center">
-
                       <button type="submit"  mat-raised-button color="primary">Submit</button>
                       <button style="margin-left: 20px;" mat-raised-button color="accent">Cancle</button>
-
-
-
                     </div>
 
 

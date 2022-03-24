@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import swal from 'sweetalert2';
+import { LoginService } from 'src/app/services/login.service';
 @Component({
   selector: 'app-account-summary',
   templateUrl: './account-summary.component.html',
   styleUrls: ['./account-summary.component.css']
 })
 export class AccountSummaryComponent implements OnInit {
-
+  public transactions : any = [];
   public user={
     PayeeName :'',
     PayeeId:'',
@@ -14,23 +15,17 @@ export class AccountSummaryComponent implements OnInit {
     Amount:''
   }
 
-  constructor() { }
+  constructor(private loginService:LoginService) { }
 
   ngOnInit(): void {
-  }
-
-
-  formSubmit(){
-    if(this.user.PayeeName!=''&& this.user.PayeeId!=''&& this.user.PayeeAccountNo!=''&& this.user.Amount!=''){
-
-      swal.fire('Success', 'Payee Added Successfull' , 'success');
-    }
-
-    if(this.user.PayeeName==''|| this.user.PayeeId==''|| this.user.PayeeAccountNo==''|| this.user.Amount==''){
-
-      swal.fire('Error', 'Please Enter Valid Details..!!','error');
-    }
-
+    this.loginService.getTransactions(this.user).subscribe(
+      (data:any)=>{
+        this.transactions = data;
+      },
+      (error)=>{
+        console.log(error)
+      }
+    )
   }
 
 }
