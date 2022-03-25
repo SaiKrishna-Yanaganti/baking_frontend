@@ -13,7 +13,7 @@ export class UserService {
 
   //add user (Registration)
 public addUser(user:any){
-  return this.http.post(`${baseUrl}/customer/addcustomer/`,user);
+  return this.http.post(`${baseUrl}/customers/save/`,user);
 }
 
 

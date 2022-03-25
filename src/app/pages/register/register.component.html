@@ -12,59 +12,59 @@
 
                 <form (ngSubmit)="formSubmit()" >
                                         <!--Name-->
-                    <mat-form-field class="full-width" appearance="fill">
-                        <mat-label>Name</mat-label>
+                    <form class="full-width" appearance="fill">
+                        <label>Name</label>
                         <input
                           [(ngModel)]="user.customerName" name = "customerName"
                         matInput placeholder="Enter Name">
-                      </mat-form-field>
+                      </form>
 
                                           <!--Email-->
-                    <mat-form-field class="full-width" appearance="fill">
-                        <mat-label>Email Id</mat-label>
+                    <form class="full-width" appearance="fill">
+                        <label>Email Id</label>
                         <input
                         [(ngModel)]="user. email" name = "email"
                         matInput placeholder="Enter Email Id : Example@sample.in">
-                      </mat-form-field>
+                      </form>
 
                                           <!--password-->
-                    <mat-form-field class="full-width" appearance="fill">
-                        <mat-label>Password</mat-label>
+                    <form class="full-width" appearance="fill">
+                        <label>Password</label>
                         <input type="password"
                         [(ngModel)]="user.password" name = "password"
                         matInput placeholder="Enter password">
-                      </mat-form-field>
+                      </form>
 
                                           <!--aadharNo-->
-                    <mat-form-field class="full-width" appearance="fill">
-                        <mat-label>Mobile Number</mat-label>
+                    <form class="full-width" appearance="fill">
+                        <label>Mobile Number</label>
                         <input
                         [(ngModel)]="user.mobileNO" name = "mobileNO"
                         matInput placeholder="Enter Mobile Number">
-                      </mat-form-field>
+                      </form>
 
                                           <!--PanNo-->
-                    <mat-form-field class="full-width" appearance="fill">
+                    <!-- <mat-form-field class="full-width" appearance="fill">
                         <mat-label>PAN Number</mat-label>
                         <input 
                         [(ngModel)]="user.pan" name = "pan"
                         matInput placeholder="Enter PAN Number">
-                      </mat-form-field>
+                      </mat-form-field> -->
 
                                           <!--Gender-->
-                    <mat-form-field class="full-width" appearance="fill">
+                    <!-- <mat-form-field class="full-width" appearance="fill">
                         <mat-label>Gender</mat-label>
                         <input
                         [(ngModel)]="user.gender" name = "gender"
                         matInput placeholder="Male/Female">                        
-                      </mat-form-field>
+                      </mat-form-field> -->
 
-                      <mat-form-field class="full-width" appearance="fill">
-                        <mat-label>Date Of Birth</mat-label>
+                      <form class="full-width" appearance="fill">
+                        <label>Date Of Birth</label>
                         <input 
                         [(ngModel)]="user.dateOfBirth" name = "dateOfBirth"
                         matInput placeholder="DD/MM/YYYY">                        
-                      </mat-form-field>
+                      </form>
 
                     
 

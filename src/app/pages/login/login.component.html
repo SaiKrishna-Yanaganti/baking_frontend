@@ -13,12 +13,12 @@
                 <form (ngSubmit)="formSubmit()" >
                     
 
-                                          <!--userId-->
+                                          <!--userName-->
                     <form class="full-width container text-center mt10" appearance="fill">
-                        <label class = "min-width">User Id</label>
+                        <label class = "min-width">User Name</label>
                         <input
                         [(ngModel)]="user.userName" name = "userName" required
-                        matInput placeholder="Enter Email Id : Example@sample.in">
+                        matInput placeholder="Enter Email Id : Example@email.in">
                     </form>
 
                                           <!--password-->
@@ -44,12 +44,12 @@
                         <div class="container text-center mt10">
                             <a [routerLink]="'/registration'">First Time User? Register</a>
                         </div>
-                        <div class="container text-center mt10">
+                        <!-- <div class="container text-center mt10">
                             <a [routerLink]="'/registration'">Forget UserName</a>
                         </div>
                         <div class="container text-center mt10">
                             <a [routerLink]="'/user-dashboard'">Forgot Password</a>
-                        </div>
+                        </div> -->
 
 
 

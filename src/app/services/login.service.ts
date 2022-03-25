@@ -15,6 +15,13 @@ export class LoginService {
     return this.http.get(`${baseUrl}/customers/login/${user.userName}/${user.password}`);
   }
 
+  // public Register(user:any){ 
+    
+  //   this.http.post<any>(`http://localhost9090/customers/save`,{user:'userName'},{user:'password'},{}).
+  //   subscribe(data => {
+  //     this.post = user.any;
+  // }
+
   public setUser(user:any){
     localStorage.setItem('user',JSON.stringify(user));
   }
