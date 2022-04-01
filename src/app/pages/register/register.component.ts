@@ -93,14 +93,6 @@ export class RegisterComponent implements OnInit {
         horizontalPosition:"right"
       });
     }
-    else if(this.user.accountNumber == ''|| this.user.accountNumber == null)
-    {
-      this._snackBar.open("Account Number is Required..!","", {
-        duration : 2000,
-        verticalPosition:"top",
-        horizontalPosition:"right"
-      });
-    }
     else if(this.user.dob == ''|| this.user.dob == null)
     {
       this._snackBar.open("Date Of Birth is Required..!","", {
