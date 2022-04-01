@@ -10,15 +10,35 @@
 
                 <!-- {{user | json}} -->
 
-                <form (ngSubmit)="formSubmit()" >
-                                        <!--Name-->
+                <form (ngSubmit)="formSubmit()" class="text-center">
+                                        <!-- First Name -->
                     <form class="full-width" appearance="fill">
-                        <label>Name</label>
+                        <label>First Name</label>
                         <input
-                          [(ngModel)]="user.customerName" name = "customerName"
-                        matInput placeholder="Enter Name">
+                          [(ngModel)]="user.firstName" name = "firstName"
+                        matInput placeholder="Enter First Name">
                       </form>
-
+                    <!-- Middle Name -->
+                    <form class="full-width" appearance="fill">
+                      <label>Middle Name</label>
+                      <input
+                        [(ngModel)]="user.middleName" name = "middleName"
+                      matInput placeholder="Enter Middle Name">
+                    </form>
+                                       <!-- Last Name -->
+                      <form class="full-width" appearance="fill">
+                        <label>Last Name</label>
+                        <input
+                          [(ngModel)]="user.lastName" name = "lastName"
+                        matInput placeholder="Enter Last Name">
+                      </form>
+                                <!--Mobile No-->
+                      <form class="full-width" appearance="fill">
+                        <label>Mobile Number</label>
+                        <input
+                        [(ngModel)]="user.mobileNumber" name = "mobileNumber"
+                        matInput placeholder="Enter Mobile Number">
+                      </form>
                                           <!--Email-->
                     <form class="full-width" appearance="fill">
                         <label>Email Id</label>
@@ -26,6 +46,49 @@
                         [(ngModel)]="user. email" name = "email"
                         matInput placeholder="Enter Email Id : Example@sample.in">
                       </form>
+
+                                           <!--aadharNo-->
+                    <form class="full-width" appearance="fill">
+                      <label>Aadhar Number</label>
+                      <input
+                      [(ngModel)]="user.aadharNumber" name = "aadharNumber"
+                      matInput placeholder="Enter Aadhar Number">
+                    </form>
+
+                      <!--dateOfBirth-->
+                      <form class="full-width" appearance="fill">
+                      <label>Date Of Birth</label>
+                      <input
+                      [(ngModel)]="user.dob" name = "dob"
+                      matInput placeholder="Enter Date Of Birth">
+                    </form>
+
+                      <!--Address-->
+                      <form class="full-width" appearance="fill">
+                      <label>Address</label>
+                      <input
+                      [(ngModel)]="user.address" name = "adress"
+                      matInput placeholder="Enter Address">
+                    </form>
+
+                     <!--Account Number-->
+                     <form class="full-width" appearance="fill">
+                      <label>Account Number</label>
+                      <input
+                      [(ngModel)]="user.accountNumber" name = "accountNumber"
+                      matInput placeholder="Enter Account Number">
+                    </form>
+
+
+
+
+                    <!-- Customer Name -->
+                    <form class="full-width" appearance="fill">
+                      <label>User Name</label>
+                      <input
+                        [(ngModel)]="user.userName" name = "userName"
+                      matInput placeholder="Enter User Name">
+                    </form>
 
                                           <!--password-->
                     <form class="full-width" appearance="fill">
@@ -35,14 +98,9 @@
                         matInput placeholder="Enter password">
                       </form>
 
-                                          <!--aadharNo-->
-                    <form class="full-width" appearance="fill">
-                        <label>Mobile Number</label>
-                        <input
-                        [(ngModel)]="user.mobileNO" name = "mobileNO"
-                        matInput placeholder="Enter Mobile Number">
-                      </form>
-
+                     
+                      
+                      
                                           <!--PanNo-->
                     <!-- <mat-form-field class="full-width" appearance="fill">
                         <mat-label>PAN Number</mat-label>
@@ -59,19 +117,19 @@
                         matInput placeholder="Male/Female">                        
                       </mat-form-field> -->
 
-                      <form class="full-width" appearance="fill">
+                      <!-- <form class="full-width" appearance="fill">
                         <label>Date Of Birth</label>
                         <input 
                         [(ngModel)]="user.dateOfBirth" name = "dateOfBirth"
                         matInput placeholder="DD/MM/YYYY">                        
-                      </form>
+                      </form> -->
 
                     
 
                       <div class="container text-center">
 
-                        <button type="submit"  mat-raised-button color="primary">Submit</button>
-                        <button style="margin-left: 20px;" mat-raised-button color="accent">Cancle</button>
+                        <button type="submit"  mat-raised-button color="primary">Register</button>
+                        <button style="margin-left: 20px;" mat-raised-button color="accent" (click)="cancel()">Cancle</button>
 
 
 

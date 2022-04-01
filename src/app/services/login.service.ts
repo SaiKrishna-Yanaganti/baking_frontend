@@ -15,16 +15,18 @@ export class LoginService {
     return this.http.get(`${baseUrl}/customers/login/${user.userName}/${user.password}`);
   }
 
-  // public Register(user:any){ 
-    
-  //   this.http.post<any>(`http://localhost9090/customers/save`,{user:'userName'},{user:'password'},{}).
-  //   subscribe(data => {
-  //     this.post = user.any;
-  // }
 
   public setUser(user:any){
     localStorage.setItem('user',JSON.stringify(user));
   }
+  // public register(){
+  //   let user: any =localStorage.postItem("user");
+  //   user = JSON.parse(user)
+  //   this.http.post(`${baseUrl}/customers/save/`).subscribe((res)=> {
+  //     localStorage.setItem('userData',JSON.stringify(res));
+  //   });
+    
+  // }
 
   public getUser(){
     let user: any =localStorage.getItem("user");
