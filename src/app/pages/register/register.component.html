@@ -1,141 +1,261 @@
 <div class="bootstrap-wrapper">
+  <div class="container">
+    <mat-card class="mt20">
+      <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <mat-card class="card">
+            <h1 class="text-center">Registration Form</h1>
 
-    <div class="container">
-      <mat-card class="mt20">
-        <div class="row">
+            <!-- {{user | json}} -->
 
-            <div class="col-md-6 offset-md-3">
-              <mat-card class="card">
-                <h1 class="text-center">Registration Form</h1>
+            <form (ngSubmit)="formSubmit()">
+              <!-- First Name -->
+              <form class="full-width" appearance="fill">
+                <label>First Name</label>
+                <input
+                  style="
+                    position: absolute;
+                    left: 150px;
+                    right: 200px;
+                    border: 1px solid rgb(12, 12, 12);
+                    box-sizing: border-box;
+                    width: 20%;
+                  "
+                  [(ngModel)]="user.firstName"
+                  name="firstName"
+                  matInput
+                  placeholder="Enter First Name"
+                /><br /><br />
+              </form>
+              <!-- Middle Name -->
+              <form class="full-width" appearance="fill">
+                <label>Middle Name</label>
+                <input
+                  style="
+                    position: absolute;
+                    left: 150px;
+                    right: 200px;
+                    border: 1px solid rgb(12, 12, 12);
+                    box-sizing: border-box;
+                    width: 20%;
+                  "
+                  [(ngModel)]="user.middleName"
+                  name="middleName"
+                  matInput
+                  placeholder="Enter Middle Name"
+                /><br /><br />
+              </form>
+              <!-- Last Name -->
+              <form class="full-width" appearance="fill">
+                <label>Last Name</label>
+                <input
+                  style="
+                    position: absolute;
+                    left: 150px;
+                    right: 200px;
+                    border: 1px solid rgb(12, 12, 12);
+                    box-sizing: border-box;
+                    width: 20%;
+                  "
+                  [(ngModel)]="user.lastName"
+                  name="lastName"
+                  matInput
+                  placeholder="Enter Last Name"
+                /><br /><br />
+              </form>
+              <!--Mobile No-->
+              <form class="full-width" appearance="fill">
+                <label>Mobile Number</label>
+                <input
+                  style="
+                    position: absolute;
+                    left: 150px;
+                    right: 200px;
+                    border: 1px solid rgb(12, 12, 12);
+                    box-sizing: border-box;
+                    width: 20%;
+                  "
+                  [(ngModel)]="user.mobileNumber"
+                  name="mobileNumber"
+                  matInput
+                  placeholder="Enter Mobile Number"
+                /><br /><br />
+              </form>
+              <!--Email-->
+              <form class="full-width" appearance="fill">
+                <label>Email Id</label>
+                <input
+                  style="
+                    position: absolute;
+                    left: 150px;
+                    right: 200px;
+                    border: 1px solid rgb(12, 12, 12);
+                    box-sizing: border-box;
+                    width: 20%;
+                  "
+                  [(ngModel)]="user.email"
+                  name="email"
+                  matInput
+                  placeholder="Enter Email Id : Example@sample.in"
+                /><br /><br />
+              </form>
 
-                <!-- {{user | json}} -->
+              <!--aadharNo-->
+              <form class="full-width" appearance="fill">
+                <label>Aadhar Number</label>
+                <input
+                  style="
+                    position: absolute;
+                    left: 150px;
+                    right: 200px;
+                    border: 1px solid rgb(12, 12, 12);
+                    box-sizing: border-box;
+                    width: 20%;
+                  "
+                  [(ngModel)]="user.aadharNumber"
+                  name="aadharNumber"
+                  matInput
+                  placeholder="Enter Aadhar Number"
+                /><br /><br />
+              </form>
 
-                <form (ngSubmit)="formSubmit()" class="text-center">
-                                        <!-- First Name -->
-                    <form class="full-width" appearance="fill">
-                        <label>First Name</label>
-                        <input
-                          [(ngModel)]="user.firstName" name = "firstName"
-                        matInput placeholder="Enter First Name">
-                      </form>
-                    <!-- Middle Name -->
-                    <form class="full-width" appearance="fill">
-                      <label>Middle Name</label>
-                      <input
-                        [(ngModel)]="user.middleName" name = "middleName"
-                      matInput placeholder="Enter Middle Name">
-                    </form>
-                                       <!-- Last Name -->
-                      <form class="full-width" appearance="fill">
-                        <label>Last Name</label>
-                        <input
-                          [(ngModel)]="user.lastName" name = "lastName"
-                        matInput placeholder="Enter Last Name">
-                      </form>
-                                <!--Mobile No-->
-                      <form class="full-width" appearance="fill">
-                        <label>Mobile Number</label>
-                        <input
-                        [(ngModel)]="user.mobileNumber" name = "mobileNumber"
-                        matInput placeholder="Enter Mobile Number">
-                      </form>
-                                          <!--Email-->
-                    <form class="full-width" appearance="fill">
-                        <label>Email Id</label>
-                        <input
-                        [(ngModel)]="user. email" name = "email"
-                        matInput placeholder="Enter Email Id : Example@sample.in">
-                      </form>
+              <!--dateOfBirth-->
+              <form class="full-width" appearance="fill">
+                <label>Date Of Birth</label>
+                <input
+                  style="
+                    position: absolute;
+                    left: 150px;
+                    right: 200px;
+                    border: 1px solid rgb(12, 12, 12);
+                    box-sizing: border-box;
+                    width: 20%;
+                  "
+                  [(ngModel)]="user.dob"
+                  name="dob"
+                  matInput
+                  placeholder="Enter Date Of Birth"
+                /><br /><br />
+              </form>
 
-                                           <!--aadharNo-->
-                    <form class="full-width" appearance="fill">
-                      <label>Aadhar Number</label>
-                      <input
-                      [(ngModel)]="user.aadharNumber" name = "aadharNumber"
-                      matInput placeholder="Enter Aadhar Number">
-                    </form>
+              <!--Address-->
+              <form class="full-width" appearance="fill">
+                <label>Address</label>
+                <input
+                  style="
+                    position: absolute;
+                    left: 150px;
+                    right: 200px;
+                    border: 1px solid rgb(12, 12, 12);
+                    box-sizing: border-box;
+                    width: 20%;
+                  "
+                  [(ngModel)]="user.address"
+                  name="adress"
+                  matInput
+                  placeholder="Enter Address"
+                /><br /><br />
+              </form>
 
-                      <!--dateOfBirth-->
-                      <form class="full-width" appearance="fill">
-                      <label>Date Of Birth</label>
-                      <input
-                      [(ngModel)]="user.dob" name = "dob"
-                      matInput placeholder="Enter Date Of Birth">
-                    </form>
+              <!--Account Number-->
+              <!--  <form class="full-width" appearance="fill">
+                      <label>Account Number</label>
+                      <input style="position: absolute; left: 150px;right: 200px; border: 1px solid rgb(12, 12, 12) ; box-sizing: border-box; width: 20%;"
+                      [(ngModel)]="user.accountNumber" name = "accountNumber"
+                      matInput placeholder="Enter Account Number"><br><br>
+                    </form>-->
 
-                      <!--Address-->
-                      <form class="full-width" appearance="fill">
-                      <label>Address</label>
-                      <input
-                      [(ngModel)]="user.address" name = "adress"
-                      matInput placeholder="Enter Address">
-                    </form>
+              <!-- Customer Name -->
+              <form class="full-width" appearance="fill">
+                <label>User Name</label>
+                <input
+                  style="
+                    position: absolute;
+                    left: 150px;
+                    right: 200px;
+                    border: 1px solid rgb(12, 12, 12);
+                    box-sizing: border-box;
+                    width: 20%;
+                  "
+                  [(ngModel)]="user.userName"
+                  name="userName"
+                  matInput
+                  placeholder="Enter User Name"
+                /><br /><br />
+              </form>
 
-                    <!-- Customer Name -->
-                    <form class="full-width" appearance="fill">
-                      <label>User Name</label>
-                      <input
-                        [(ngModel)]="user.userName" name = "userName"
-                      matInput placeholder="Enter User Name">
-                    </form>
+              <!--password-->
+              <form class="full-width" appearance="fill">
+                <label>Password</label>
+                <input
+                  type="password"
+                  style="
+                    position: absolute;
+                    left: 150px;
+                    right: 200px;
+                    border: 1px solid rgb(12, 12, 12);
+                    box-sizing: border-box;
+                    width: 20%;
+                  "
+                  [(ngModel)]="user.password"
+                  name="password"
+                  matInput
+                  placeholder="Enter password"
+                />
+              </form>
 
-                                          <!--password-->
-                    <form class="full-width" appearance="fill">
-                        <label>Password</label>
-                        <input type="password"
-                        [(ngModel)]="user.password" name = "password"
-                        matInput placeholder="Enter password">
-                      </form>
-
-                     
-                      
-                      
-                                          <!--PanNo-->
-                    <!-- <mat-form-field class="full-width" appearance="fill">
+              <!--PanNo-->
+              <!-- <mat-form-field class="full-width" appearance="fill">
                         <mat-label>PAN Number</mat-label>
                         <input 
                         [(ngModel)]="user.pan" name = "pan"
                         matInput placeholder="Enter PAN Number">
                       </mat-form-field> -->
 
-                                          <!--Gender-->
-                    <!-- <mat-form-field class="full-width" appearance="fill">
+              <!--Gender-->
+              <!-- <mat-form-field class="full-width" appearance="fill">
                         <mat-label>Gender</mat-label>
                         <input
                         [(ngModel)]="user.gender" name = "gender"
                         matInput placeholder="Male/Female">                        
                       </mat-form-field> -->
 
-                      <!-- <form class="full-width" appearance="fill">
+              <!-- <form class="full-width" appearance="fill">
                         <label>Date Of Birth</label>
                         <input 
                         [(ngModel)]="user.dateOfBirth" name = "dateOfBirth"
                         matInput placeholder="DD/MM/YYYY">                        
                       </form> -->
 
-                    
-
-                      <div class="container text-center">
-
-                        <button type="submit"  mat-raised-button color="primary">Register</button>
-                        <button style="margin-left: 20px;" mat-raised-button color="accent" (click)="cancel()">Cancle</button>
-
-
-
-                      </div>
-
-
-
-
-                </form>
-              </mat-card>
-
-
-            </div>
-
+              <div class="container text-center">
+                <button
+                  type="submit"
+                  mat-raised-button
+                  color="primary"
+                  style="
+                    background-color: rgb(101, 121, 235);
+                    color: rgb(239, 235, 243);
+                  "
+                >
+                  Register
+                </button>
+                <button
+                  style="margin-left: 20px"
+                  mat-raised-button
+                  color="accent"
+                  (click)="cancel()"
+                  style="
+                    background-color: rgb(243, 38, 89);
+                    color: rgb(239, 235, 243);
+                  "
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </mat-card>
         </div>
-      </mat-card>
-
-    </div>
-
+      </div>
+    </mat-card>
+  </div>
 </div>

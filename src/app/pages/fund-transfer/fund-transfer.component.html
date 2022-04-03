@@ -1,48 +1,86 @@
 <div class="bootstrap-wrapper">
-
   <div class="container">
     <mat-card class="mt20">
       <div class="row">
+        <div class="col-md-6 offset-md-3">
+          <mat-card class="card">
+            <h1 class="text-center">Fund Transfer</h1>
 
-          <div class="col-md-6 offset-md-3">
-            <mat-card class="card">
-              <h1 class="text-center">Fund Transfer</h1>
+            <!-- {{user | json}} -->
 
-              <!-- {{user | json}} -->
+            <form (ngSubmit)="myTransfer()">
+              <!--Account No-->
+              <div class="container text-center">
+                <form class="full-width" appearance="fill">
+                  <label>Account No :</label>
+                  <input
+                    style="
+                      position: relative;
+                      left: 36px;
+                      right: 100px;
+                      border: 1px solid rgb(12, 12, 12);
+                      box-sizing: border-box;
+                      width: 20%;
+                    "
+                    type="number"
+                    [(ngModel)]="user.accountNo"
+                    name="accountNo"
+                    matInput
+                    placeholder="Enter Account"
+                  />
+                </form>
+                <br />
 
-              <form (ngSubmit)="myTransfer()" >
-                                      <!--Account No-->
-                  <form class="full-width" appearance="fill">
-                      <label>Account No</label>
-                      <input
-                      [(ngModel)]="user.accountNo" name="accountNo"
-                      matInput placeholder="Enter Account">
-                    </form>
-
-                                        <!--Amount -->
-                  <form class="full-width" appearance="fill">
-                      <label>Amount</label>
-                      <input
-                      [(ngModel)]="user.amount" name="amount"
-                      matInput placeholder="Enter amount">
-                    </form>
-                    <div class="container text-center">
-                      <button type="submit"  mat-raised-button color="primary">Submit</button>
-                      <button style="margin-left: 20px;" mat-raised-button color="accent">Cancle</button>
-                    </div>
-
-
-
-
-              </form>
-            </mat-card>
-
-
-          </div>
-
+                <!--Amount -->
+                <form class="full-width" appearance="fill">
+                  <label>Amount :</label>
+                  <input
+                    style="
+                      position: relative;
+                      left: 50px;
+                      right: 100px;
+                      border: 1px solid rgb(12, 12, 12);
+                      box-sizing: border-box;
+                      width: 20%;
+                    "
+                    type="number"
+                    [(ngModel)]="user.amount"
+                    name="amount"
+                    matInput
+                    placeholder="Enter amount"
+                  />
+                </form>
+              </div>
+              <br />
+              <div class="container text-center">
+                <button
+                  type="submit"
+                  mat-raised-button
+                  color="primary"
+                  style="
+                    background-color: rgb(101, 121, 235);
+                    color: rgb(239, 235, 243);
+                  "
+                >
+                  Procced
+                </button>
+                &nbsp;
+                <button
+                  style="margin-left: 20px"
+                  mat-raised-button
+                  color="accent"
+                  style="
+                    background-color: rgb(243, 38, 89);
+                    color: rgb(239, 235, 243);
+                  "
+                >
+                  Cancle
+                </button>
+              </div>
+            </form>
+          </mat-card>
+        </div>
       </div>
     </mat-card>
-
   </div>
-
 </div>
